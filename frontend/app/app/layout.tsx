@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const geistSans = Geist({
+const geistSans = Space_Grotesk({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["500", "700"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = JetBrains_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -19,8 +20,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "30DAYS College | Challenge Command Center",
-  description: "A focused 30-day LeetCode challenge dashboard for college cohorts.",
+  title: "Accelerate Club | 30 Days of Code",
+  description: "Accelerate Club's 30-day LeetCode challenge for RVCE — register, solve daily, climb the leaderboard.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
